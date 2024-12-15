@@ -1,0 +1,168 @@
+body {
+	width: 400px;
+	padding: 16px;
+	min-width: 400px;
+	min-height: 100vh; /* Ensure it spans the full viewport height */
+	margin: 0; /* Remove default margin */
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, sans-serif;
+	color: #e2e8f0;
+	background: linear-gradient(to bottom right, black, #1f2937, #1e293b);
+	display: flex; /* Ensure the container is vertically centered */
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 100%; /* Ensure it spans the body width */
+	max-width: 400px; /* Keep it constrained to a reasonable size */
+}
+
+h2 {
+	margin: 0;
+	color: #ffffff;
+	font-size: 1.5rem;
+}
+
+.input-group {
+	position: relative;
+	width: 100%;
+}
+
+.input-wrapper {
+	display: flex;
+	align-items: center;
+	background-color: #1e293b;
+	border-radius: 8px;
+	padding: 8px;
+	gap: 8px;
+}
+
+input {
+	flex: 1;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	padding: 4px 8px;
+	outline: none;
+	color: #f7fafc; /* text-gray-100 */
+}
+
+input::placeholder {
+	color: #a0aec0; /* placeholder-gray-400 */
+	opacity: 1;
+}
+
+.send-button {
+	border: none;
+	border-radius: 6px;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: white;
+	padding: 0;
+	transition: background-color 0.2s;
+	background-color: #4a5568; /* bg-gray-700 */
+}
+
+.send-button:hover {
+	background-color: #2d3748;
+}
+
+.send-button:disabled {
+	background-color: #475569;
+	cursor: not-allowed;
+}
+
+label {
+	font-weight: 500;
+	color: #374151;
+}
+
+textarea {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	font-size: 14px;
+	resize: vertical;
+	min-height: 80px;
+}
+
+button {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 500;
+	transition: background-color 0.2s;
+}
+
+.primary-button {
+	background-color: #2563eb;
+	color: white;
+}
+
+.primary-button:hover {
+	background-color: #1d4ed8;
+}
+
+.primary-button:disabled {
+	background-color: #93c5fd;
+	cursor: not-allowed;
+}
+
+.above-result-box {
+	padding: 0% 16px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: solid rgb(196, 191, 191) 1px;
+}
+
+.copy-button {
+	background: transparent;
+	border: none;
+	color: #64748b;
+	cursor: pointer;
+	padding: 4px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.2s;
+}
+
+.copy-button:hover {
+	color: #e2e8f0;
+}
+
+.result-section {
+	/* background-color: #1e293b; */
+	border-radius: 8px;
+	font-size: 14px;
+	background-color: rgba(45, 55, 72, 0.5);
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.result-box {
+	flex: 1;
+	/* background: linear-gradient(to right, #1f2937, #1e293b); */
+	/* background-color: #1e293b; */
+	/* border-radius: 8px; */
+	padding: 16px;
+	font-size: 14px;
+	line-height: 1.5;
+	overflow-y: auto;
+	color: #e2e8f0;
+	white-space: pre-wrap;
+}
