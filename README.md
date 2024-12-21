@@ -45,49 +45,123 @@ OnSelectAI is a powerful Chrome extension that leverages local Large Language Mo
 
 ## Installation
 
-### From Chrome Web Store (Coming Soon)
+### For Chrome Web Store (Coming Soon)
 
 TBD
 
+### Prerequisites
+
+- Docker and Docker Compose installed on your system
+- Google Chrome browser
+- At least 4GB of free disk space
+
 ### Manual Installation
 
-1. Clone this repository:
+### Step 1: Backend Setup
+
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/dineshnikhil/OnSelectAI.git
+   cd OnSelectAI
    ```
 
-2. Go to chrome://extensions/ in your Chrome browser.
-3. Enable Developer mode (toggle in the top-right corner).
-4. Click Load unpacked and select the cloned repository folder.
-5. The extension will now be available in your browser.
+2. Start the Docker containers:
 
-## Usage
+   ```bash
+   docker compose up -d
+   ```
 
-1. Highlight text on a web page.
-2. Right-click and select an action from the context menu (e.g., Summarize, Draft Reply, Custom Instructions).
-3. Interact with the result in the extension’s pop-up window.
+This will:
 
-## Roadmap
+- Start the local API server
+- Initialize the Ollama LLM service
+- Set up all necessary connections
 
-- Add multilingual support.
-- Enable cloud-based LLM fallback for advanced processing.
-- Integrate with email services (e.g., Gmail, Outlook).
-- Build a subscription-based SaaS model.
-- Add user customization for instruction templates.
-- Expand to Firefox and Edge.
+### Step 2: Extension Installation
+
+1. Open Chrome and go to `chrome://extensions/`
+2. Enable "Developer mode" (toggle in top-right)
+3. Click "Load unpacked"
+4. Select the `LocalAIExtension` folder from the cloned repository
+
+## How to Use
+
+### Basic Usage
+
+1. **Select Text**: Highlight any text on a webpage
+2. **Access Menu**: Right-click to open the context menu
+3. **Choose Action**: Select one of the available options:
+   - Summarize
+   - Rewrite (Friendly)
+   - Rewrite (Professional)
+   - Make Bullet Points
+   - Reply to Email
+   - Custom Instructions
+
+### Custom Instructions
+
+1. Select text and choose "Custom Instructions"
+2. Enter your specific instruction in the popup
+3. Click the send button or press Enter
+4. View the AI-processed result
+
+### Copy Results
+
+- Click the copy icon in the result window
+- The processed text is now in your clipboard
+- A checkmark will briefly appear to confirm the copy
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Extension Not Working**
+
+   - Ensure Docker containers are running
+   - Check if the API is accessible at `http://localhost:3000`
+   - Restart the browser if necessary
+
+2. **Slow Processing**
+
+   - First request might be slower due to model loading
+   - Subsequent requests will be faster
+   - Check system resources if persistently slow
+
+3. **Docker Issues**
+   - Ensure ports 3000 and 11434 are available
+   - Try restarting Docker services
+   - Check Docker logs for specific errors
+
+## Technical Requirements
+
+- **Operating System**: Windows/Mac/Linux
+- **Browser**: Google Chrome (latest version)
+- **System Memory**: Minimum 8GB RAM recommended
+- **Disk Space**: 4GB+ for LLM models
+- **Docker**: Latest stable version
+- **Docker Compose**: Latest stable version
+
+## Privacy Notice
+
+OnSelectAI processes all text locally on your machine. We:
+
+- Don't collect any user data
+- Don't transmit text to external servers
+- Don't store processed results
+- Don't require internet for text processing
+
+## Support
+
+For issues, questions, or suggestions:
+
+1. Open an issue on GitHub
+2. Check the troubleshooting guide
+3. Contact support at [your-email@domain.com]
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Contact
-
-For queries or support, contact:
-
-📧 your-email@example.com
-🌐 Your Micro SaaS Website
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Technical Requirements
 
