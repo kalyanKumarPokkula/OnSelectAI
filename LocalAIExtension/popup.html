@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<h2>LocalAIAssist</h2>
+			<h1>OnSelectAI</h1>
 
 			<div
 				id="customInstructionsSection"
@@ -38,12 +38,10 @@
 				</div>
 			</div>
 
-			<!-- <button id="processText" class="primary-button">Process with AI</button> -->
-
 			<div class="result-section">
-				<div class="above-result-box">
-					<p>Result</p>
-					<button id="copyButton" class="copy-button">
+				<div class="result-header">
+					<label>Result</label>
+					<button id="copyResult" class="icon-button">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="16"
@@ -62,6 +60,11 @@
 						</svg>
 					</button>
 				</div>
+				<div
+					id="loadingSpinner"
+					class="loading-spinner"
+					style="display: none"
+				></div>
 				<div id="result" class="result-box"></div>
 			</div>
 		</div>

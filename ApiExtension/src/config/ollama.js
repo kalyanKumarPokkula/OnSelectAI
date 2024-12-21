@@ -1,10 +1,23 @@
 import { Ollama } from '@langchain/ollama';
+import { MAX_RETRIES, TIMEOUT } from './config.js';
 
-export const llm = new Ollama({
-	// model: 'llama3.1:8b', // Default value
-	model: 'llama3.2:latest',
-	temperature: 0,
-	maxRetries: 2,
-	maxTokens: 100,
-	// other params...
-});
+const createLLMInstance = () => {
+	return new Ollama({
+		baseUrl: 'http://ollama:11434',
+		model: 'llama3.2:3b',
+		temperature: 0,
+		maxRetries: MAX_RETRIES,
+		maxTokens: 100,
+		timeout: TIMEOUT,
+		callbacks: [
+			{
+				handleLLMError: async (error) => {
+					console.error('LLM Error:', error);
+					// Implement fallback logic here if needed
+				},
+			},
+		],
+	});
+};
+
+export const llm = createLLMInstance();

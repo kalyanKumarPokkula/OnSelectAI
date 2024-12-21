@@ -166,3 +166,57 @@ button {
 	color: #e2e8f0;
 	white-space: pre-wrap;
 }
+
+.loading-spinner {
+	width: 24px;
+	height: 24px;
+	border: 3px solid #f3f3f3;
+	border-top: 3px solid #3498db;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	margin: 10px auto;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.error {
+	color: #ef4444;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: rgba(239, 68, 68, 0.1);
+	margin: 8px 0;
+}
+
+.result-section {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	padding: 16px;
+	margin-top: 16px;
+}
+
+.result-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.icon-button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+	color: #e2e8f0;
+	transition: color 0.2s;
+}
+
+.icon-button:hover {
+	color: #ffffff;
+}

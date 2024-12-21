@@ -1,13 +1,19 @@
-FROM node:20
+FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+# Install curl for health checks
+RUN apk add --no-cache curl
 
+COPY package*.json ./
 RUN npm install
 
 COPY . .
 
+# Make the startup script executable
+COPY scripts/start.sh /start.sh
+RUN chmod +x /start.sh
+
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD ["/start.sh"]
