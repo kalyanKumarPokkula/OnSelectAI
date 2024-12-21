@@ -1,10 +1,12 @@
+![OnSelectAI Logo](/LocalAIExtension/assets/productIcon-16.png)
+
 # OnSelectAI - Local AI Text Processing Extension
 
 ## Overview
 
 OnSelectAI is a powerful Chrome extension that leverages local Large Language Models (LLMs) to process text directly in your browser. With privacy at its core, all processing happens locally on your machine, ensuring your data never leaves your system.
 
-![OnSelectAI Demo](path_to_demo_gif)
+![OnSelectAI Demo](/LocalAIExtension/assets/productDemo.gif)
 
 ## Features
 
@@ -162,29 +164,3 @@ For issues, questions, or suggestions:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Technical Requirements
-
-- **Operating System**: Windows/Mac/Linux
-- **Browser**: Google Chrome (latest version)
-- **System Memory**: Minimum 8GB RAM recommended
-- **Disk Space**: 4GB+ for LLM models
-- **Docker**: Latest stable version
-- **Docker Compose**: Latest stable version
-
-## Privacy Notice
-
-OnSelectAI processes all text locally on your machine. We:
-
-- Don't collect any user data
-- Don't transmit text to external servers
-- Don't store processed results
-- Don't require internet for text processing
-
-## Support
-
-For issues, questions, or suggestions:
-
-1. Open an issue on GitHub
-2. Check the troubleshooting guide
-3. Contact support at [your-email@domain.com]
