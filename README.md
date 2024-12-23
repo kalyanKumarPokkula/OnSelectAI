@@ -1,4 +1,4 @@
-![OnSelectAI Logo](/LocalAIExtension/assets/productIcon-16.png)
+![OnSelectAI Logo](/Client/assets/productIcon-16.png)
 
 # OnSelectAI - Local AI Text Processing Extension
 
@@ -6,7 +6,7 @@
 
 OnSelectAI is a powerful Chrome extension that leverages local Large Language Models (LLMs) to process text directly in your browser. With privacy at its core, all processing happens locally on your machine, ensuring your data never leaves your system.
 
-![OnSelectAI Demo](/LocalAIExtension/assets/productDemo.gif)
+![OnSelectAI Demo](/Client/assets/productDemo.gif)
 
 ## Features
 
@@ -64,7 +64,7 @@ TBD
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dineshnikhil/OnSelectAI.git
+   git clone https://github.com/kalyanKumarPokkula/OnSelectAI.git
    cd OnSelectAI
    ```
 
